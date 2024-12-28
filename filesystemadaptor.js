@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/tiddlywiki/filesystem/filesystemadaptor.js
+title: $:/plugins/oveek/tiddlywiki/filesystem/filesystemadaptor.js
 type: application/javascript
 module-type: syncadaptor
 
@@ -19,6 +19,7 @@ var fs = $tw.node ? require("fs") : null,
 function FileSystemAdaptor(options) {
 	var self = this;
 	this.wiki = options.wiki;
+    console.log("Loaded modified filesystem syncadaptor that can dynamically load from disk.");
 	this.logger = new $tw.utils.Logger("filesystem",{colour: "blue"});
 	// Create the <wiki>/tiddlers folder if it doesn't exist
 	$tw.utils.createDirectory($tw.boot.wikiTiddlersPath);
